@@ -42,6 +42,13 @@ main() {
     expect(counter.count, -1);
   });
 
+  test('Given Counter class is instantiated, when resetCount is called, then count = 0', (){
+
+    counter.resetCount();
+    expect(counter.count, 0);
+    
+  });
+
 
 
 });

@@ -16,4 +16,8 @@ class Counter {
     _count--;
   }
 
+  void resetCount(){
+    throw UnimplementedError();
+  }
+
 }

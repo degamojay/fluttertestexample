@@ -1,5 +1,6 @@
 class Counter {
   late int _count;
+  late int _x=0;
 
   Counter(){
     _count = 0;
@@ -8,12 +9,12 @@ class Counter {
   int get count => _count;
 
   void incrementCount() {
-    _count++;
+    _count += 1 + _x++;
   }
 
   void decrementCount(){
 
-    _count--;
+    if(count > 0) _count--;
   }
 
   void resetCount(){

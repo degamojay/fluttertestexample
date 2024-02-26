@@ -1,25 +1,48 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fluttertestexample/counter.dart';
 
-
 main() {
-  test('Given Counter class, when instantiated, then count = 0', (){
+
+  //setup = called when running testcase 1by1
+  //setupall = first 
+  //teardown = called after every test case
+  //teardownall = last
+
+  group('Counter class: ', () { 
+
+  late Counter counter;
+  setUp(() => counter = Counter()); //setup
+
+  test('Given Counter class, when instantiated, then count = 0', () {
     //arrange
-    Counter counter;
     //act
-    counter = Counter();
     int count = counter.count;
     //assert
     expect(count, 0);
   });
 
-  test('Given Counter class, when incrementCount is called, then count = 1', (){
+  test('Given Counter class, when incrementCount is called, then count = 1',
+      () {
     //arange
-    Counter counter = Counter();
+
     //act
     counter.incrementCount();
     //assert
     expect(counter.count, 1);
-
   });
+
+  test(
+      'Given Counter class is instantiated, when decrementCount is called, then count = -1',
+      () {
+    //arrange
+
+    //act
+    counter.decrementCount();
+    //assert
+    expect(counter.count, -1);
+  });
+
+
+
+});
 }

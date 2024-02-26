@@ -11,4 +11,9 @@ class Counter {
     _count++;
   }
 
+  void decrementCount(){
+
+    _count--;
+  }
+
 }

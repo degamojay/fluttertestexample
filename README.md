@@ -1,6 +1,6 @@
 # fluttertestexample
 
-A new Flutter project.
+A simple counter test case
 
 ## Getting Started
 
